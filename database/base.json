@@ -1,0 +1,16 @@
+{
+  "metrics": [
+    {
+      "id": 1,
+      "name": "miligrama",
+      "prefix": "ml"
+    },
+    {
+      "id": 2,
+      "name": "kilograma",
+      "prefix": "kg"
+    }
+  ],
+  "ingredients": [
+  ]
+}

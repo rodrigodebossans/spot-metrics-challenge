@@ -1,3 +1,3 @@
 export const environments = {
-    coreUrl: 'http://localhost:3001',
-}
+  coreUrl: 'http://localhost:3001',
+};

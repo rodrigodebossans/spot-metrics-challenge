@@ -6,7 +6,8 @@ import { useIngredientContext } from '../../context/IngredientContext';
 export default function TableIngredient() {
   const { ingredients } = useIngredientContext();
 
-  if (ingredients.length) return (
+  if (ingredients.length)
+    return (
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -28,7 +29,10 @@ export default function TableIngredient() {
         </tbody>
       </Table>
     );
-  else return (
-    <p className="text-center">Você ainda não adicionou nenhum ingrediente :(</p>
-  )
+  else
+    return (
+      <p className='text-center'>
+        Você ainda não adicionou nenhum ingrediente :(
+      </p>
+    );
 }

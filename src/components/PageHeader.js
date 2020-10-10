@@ -13,7 +13,7 @@ export default function PageHeader({ title, labelButton }) {
   return (
     <>
       <h1 className='h3'>{title}</h1>
-      <Button variant='dark' onClick={handleShow}>
+      <Button className="d-print-none" variant='dark' onClick={handleShow}>
         {labelButton}
       </Button>
     </>

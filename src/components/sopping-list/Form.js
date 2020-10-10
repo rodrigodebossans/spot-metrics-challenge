@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Col, Form, Button, Modal } from 'react-bootstrap';
 
 import { useModalContext } from '../../context/ModalContext';
 import { useIngredientContext } from '../../context/IngredientContext';
+import { useShoppingListContext } from '../../context/ShoppingListContext';
 
 export default function FormAddItem() {
   const { show, setShow } = useModalContext();
-
   const { ingredients } = useIngredientContext();
+  const { shoppingList, setShoppingList } = useShoppingListContext();
 
   const [item, setItem] = useState({ amount: 1 });
-  const [shoppingList, setShoppingList] = useState([]);
 
   const handleClose = () => {
     setShow(false);
@@ -46,10 +46,6 @@ export default function FormAddItem() {
 
     setShow(false);
   };
-
-  useEffect(() => {
-    console.log(shoppingList)
-  }, [shoppingList])
 
   return (
     <Modal show={show} onHide={handleClose} centered>

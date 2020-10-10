@@ -17,7 +17,10 @@ export default function Home() {
           <Container>
             <Row className='mt-5'>
               <Col md={12} className='d-flex justify-content-between'>
-                <PageHeader></PageHeader>
+                <PageHeader
+                  title='Meus ingredientes'
+                  labelButton='Adicionar'
+                ></PageHeader>
               </Col>
               <Col md={12}>
                 <hr className='mb-4'></hr>

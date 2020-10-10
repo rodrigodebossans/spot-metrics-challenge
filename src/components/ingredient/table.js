@@ -1,7 +1,7 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
 
-import { useIngredientContext } from '../../context/IngredientContext';
+import { useIngredientContext } from '../../context/ingredient';
 
 export default function TableIngredient() {
   const { ingredients } = useIngredientContext();

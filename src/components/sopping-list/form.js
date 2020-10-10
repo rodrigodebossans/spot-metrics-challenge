@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { Col, Form, Button, Modal } from 'react-bootstrap';
 
-import { useModalContext } from '../../context/ModalContext';
-import { useIngredientContext } from '../../context/IngredientContext';
-import { useShoppingListContext } from '../../context/ShoppingListContext';
+import { useModalContext } from '../../context/modal';
+import { useIngredientContext } from '../../context/ingredient';
+import { useShoppingListContext } from '../../context/shopping-list';
 
 export default function FormAddItem() {
+  const [item, setItem] = useState({ amount: 1 });
+
   const { show, setShow } = useModalContext();
   const { ingredients } = useIngredientContext();
   const { shoppingList, setShoppingList } = useShoppingListContext();
-
-  const [item, setItem] = useState({ amount: 1 });
 
   const handleClose = () => {
     setShow(false);
@@ -87,7 +87,7 @@ export default function FormAddItem() {
               </Col>
             </Form.Row>
             <Button variant='primary' type='submit' className='float-right'>
-              Adicionar ingrediente
+              Adicionar item
             </Button>
           </Form>
         ) : (

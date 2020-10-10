@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Table } from 'react-bootstrap';
 
-import { useShoppingListContext } from '../../context/ShoppingListContext';
+import { useShoppingListContext } from '../../context/shopping-list';
 
 export default function TableShoppingList() {
   const { shoppingList } = useShoppingListContext();
@@ -32,7 +32,7 @@ export default function TableShoppingList() {
               ))}
             </tbody>
           </Table>
-          <Button className="d-print-none" variant='dark' onClick={handlePrint}>
+          <Button className='d-print-none' variant='dark' onClick={handlePrint}>
             Imprimir
           </Button>
         </>

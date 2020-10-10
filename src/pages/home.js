@@ -1,12 +1,12 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import IngredientProvider from '../context/IngredientContext';
-import ModalProvider from '../context/ModalContext';
-import Header from '../components/Header';
-import PageHeader from '../components/PageHeader';
-import TableIngredient from '../components/ingredient/Table';
-import FormIngredient from '../components/ingredient/Form';
+import IngredientProvider from '../context/ingredient';
+import ModalProvider from '../context/modal';
+import Header from '../components/header';
+import PageHeader from '../components/page-header';
+import TableIngredient from '../components/ingredient/table';
+import FormIngredient from '../components/ingredient/form';
 
 export default function Home() {
   return (

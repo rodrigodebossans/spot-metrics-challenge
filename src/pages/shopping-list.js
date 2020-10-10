@@ -1,13 +1,13 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import Header from '../components/Header';
-import PageHeader from '../components/PageHeader';
-import FormAddItem from '../components/sopping-list/Form';
-import ModalProvider from '../context/ModalContext';
-import IngredientProvider from '../context/IngredientContext';
-import TableShoppingList from '../components/sopping-list/Table';
-import ShoppingListProvider from '../context/ShoppingListContext';
+import Header from '../components/header';
+import PageHeader from '../components/page-header';
+import FormAddItem from '../components/sopping-list/form';
+import ModalProvider from '../context/modal';
+import IngredientProvider from '../context/ingredient';
+import TableShoppingList from '../components/sopping-list/table';
+import ShoppingListProvider from '../context/shopping-list';
 
 export default function ShopingList() {
   return (

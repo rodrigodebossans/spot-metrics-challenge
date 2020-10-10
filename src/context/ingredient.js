@@ -9,7 +9,7 @@ export default function IngredientProvider({ children }) {
   const [reload, setReload] = useState(false);
 
   useEffect(() => {
-    const params = new URLSearchParams()
+    const params = new URLSearchParams();
     params.set('_expand', 'metric');
     getIngredients(params).then(({ data }) => setIngredients(data));
   }, [reload]);

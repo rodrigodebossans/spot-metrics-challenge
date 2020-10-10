@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Col, Form, Button, Modal } from 'react-bootstrap';
 
-import { getMetrics } from '../../services/metrics';
-import { useIngredientContext } from '../../context/IngredientContext';
-import { useModalContext } from '../../context/ModalContext';
+import { getMetrics } from '../../services/metric';
+import { useIngredientContext } from '../../context/ingredient';
+import { useModalContext } from '../../context/modal';
 
 export default function FormIngredient() {
   const [metrics, setMetrics] = useState([]);
@@ -66,7 +66,7 @@ export default function FormIngredient() {
               <Form.Group controlId='ingredientMetric'>
                 <Form.Control
                   type='number'
-                  min='0'
+                  min='0.1'
                   step='0.01'
                   placeholder='Informe uma métrica'
                   onChange={handleMetricChange}
@@ -76,7 +76,15 @@ export default function FormIngredient() {
             </Col>
             <Col xs={4}>
               <Form.Group>
-                <Form.Control as='select' onChange={handleUnityChange} required>
+                <Form.Control
+                  as='select'
+                  onChange={handleUnityChange}
+                  custom
+                  required
+                >
+                  <option key={-1} value=''>
+                    Unidade
+                  </option>
                   {metrics.map((metric) => (
                     <option key={metric.id} value={metric.id}>
                       {metric.name}
